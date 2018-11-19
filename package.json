@@ -1,0 +1,48 @@
+{
+  "name": "bookstore_api",
+  "version": "1.0.0",
+  "description": "An library api to handle data of the books already read.",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node ./bin/index",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/nodemon --exec ./node_modules/.bin/babel-node ./bin/index",
+    "build": "NODE_ENV=production ./node_modules/.bin/babel bin/ -d dist/bin/ && ./node_modules/.bin/babel src/ -d dist/src/",
+    "server": "npm run build && node ./dist/bin/index",
+    "eslint": "./node_modules/.bin/eslint ./src/*",
+    "precommit": "npm run eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weslopes/bookstore_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weslopes/bookstore_api/issues"
+  },
+  "homepage": "https://github.com/weslopes/bookstore_api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "logging": "^3.2.0",
+    "loglevel": "^1.6.1",
+    "mongodb": "^3.1.10",
+    "morgan": "^1.9.1",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.1.4",
+    "nodemon": "^1.18.6"
+  }
+}
